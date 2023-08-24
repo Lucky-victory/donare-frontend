@@ -19,7 +19,7 @@ export const Hero = () => {
         {/* main div with hero text anf ctas */}
         <div className="-mt-6 w-full h-full flex flex-col justify-center items-center text-center z-10 lg:max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-7xl font-semibold text-white">
-            <span className="text-[#89D472]"> Crowdfund </span> for Innovative
+            <span className="text-[#eb8108]"> Crowdfund </span> for Innovative
             causes on the blockchain
           </h1>
           <p className="text-white text-opacity-60 text-lg md:text-xl text-center pt-4 ">

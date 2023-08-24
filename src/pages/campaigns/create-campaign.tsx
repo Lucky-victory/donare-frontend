@@ -291,11 +291,11 @@ const CreateCampaign = () => {
             <h1 className="font-bold startC">Start a Campaign</h1>
           </div>
 
-          <h2 className="text-xl text-[#89D472] pl-20 pt-5">
+          <h2 className="text-xl text-[#eb8108] pl-20 pt-5">
             Campaign Info{" "}
             <span
               className={`${
-                tab1 ? "p-14 text-gray-400" : "p-14 text-[#89D472]"
+                tab1 ? "p-14 text-gray-400" : "p-14 text-[#eb8108]"
               }`}
             >
               More details

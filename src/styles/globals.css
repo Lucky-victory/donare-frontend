@@ -8,12 +8,16 @@
         font-family: 'Space Grotesk', sans-serif;
     }
 }
+:root{
+--primary-color:#eb8108;
+--primary-color-tint:#dba567 ;
 
+}
 .long-btn {
-    @apply bg-[#89D472] hover:bg-[#71b15d] text-white rounded-sm focus:outline-none trans font-semibold
+    @apply bg-[#eb8108] hover:bg-[#dba567] text-white rounded-sm focus:outline-none trans font-semibold
 }
 .long-btn-trans {
-    @apply border border-[#89D472] hover:border-[#71b15d] text-[#71b15d] bg-transparent rounded-lg focus:outline-none trans
+    @apply border border-[#eb8108] hover:border-[#dba567] text-[#dba567] bg-transparent rounded-lg focus:outline-none trans
 }
 .btn-black {
     @apply bg-[#000000] hover:bg-[#292727] text-white rounded focus:outline-none trans
@@ -23,10 +27,10 @@
     @apply transition-all duration-300 ease-in-out;
 }
 .text-lime {
-    @apply text-[#89D472];
+    @apply text-[#eb8108];
 }
 .bg-lime {
-    @apply bg-[#89D472];
+    @apply bg-[#eb8108];
 }
 
 .hero{
@@ -39,12 +43,12 @@
 
 }
 .bfpe{
-    background: #89D472;
+    background: #eb8108;
 }
 .startC {
     
 Font-size: 48px;
-color:  #89D472;
+color:  #eb8108;
 padding-top: 78px;
 padding-left: 79px
 }
@@ -56,7 +60,7 @@ padding-left: 79px
 }
 
 .position-indicator {
-    border-bottom: 4px solid #83d46a;
+    border-bottom: 4px solid #dba567 ;
     width: 50px;
     margin-top: 6px;
     margin-left: 120px;

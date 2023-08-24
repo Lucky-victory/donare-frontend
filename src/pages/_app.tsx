@@ -22,7 +22,7 @@ const { chains, provider } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "DAOVATION",
+  appName: "DONARE",
   projectId: "123",
   chains,
 });
@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <RainbowKitProvider
         chains={chains}
         theme={darkTheme({
-          accentColor: "#89D472",
+          accentColor: "#eb8108",
           accentColorForeground: "white",
           borderRadius: "medium",
           fontStack: "system",

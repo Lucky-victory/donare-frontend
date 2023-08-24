@@ -1,9 +1,9 @@
-## Daovation
+## Donare
 
-Daovation is a crosschain Decentralised Autonomous Organisation (DAO) platform that empowers users to create campaigns and raise funds for their dream projects or any cause they wish to support. The platform also incorporates a governance feature, allowing DAO members to create proposals that control the platform's content and make decisions, including taking down fraudulent campaigns through a voting system.
+Donare is a crosschain Decentralised Autonomous Organisation (DAO) platform that empowers users to create campaigns and raise funds for their dream projects or any cause they wish to support. The platform also incorporates a governance feature, allowing DAO members to create proposals that control the platform's content and make decisions, including taking down fraudulent campaigns through a voting system.
 
 ### Live Demo
-https://daovation.vercel.app/
+https://donare.vercel.app/
 
 ## Features
 * Create and manage campaigns for fundraising.
@@ -27,7 +27,7 @@ cd dao-front-end
 npm install
 ```
 ## Usage
-Once you have completed the installation, you can run Daovation using the following 
+Once you have completed the installation, you can run Donare using the following 
 command: 
 ```bash
 npm run dev
