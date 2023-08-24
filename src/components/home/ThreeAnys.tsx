@@ -1,6 +1,6 @@
 import React from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
-import { ThreeAnysImg } from "../../../public";
+import { GlobeSvg } from "../../../public";
 import Image from "next/image";
 
 const ThreeAnys = () => {
@@ -29,8 +29,8 @@ const ThreeAnys = () => {
         </div>
         <div className="w-full lg:w-1/2 h-full">
           <Image
-            src={ThreeAnysImg}
-            alt="ThreeAnysImg"
+            src={GlobeSvg}
+            alt=""
             className="object-contain object-center w-full h-full"
           />
         </div>

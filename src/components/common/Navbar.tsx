@@ -9,6 +9,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 // }
 
 export default function Navbar() {
+  const linkClassNames='text-base font-medium text-gray-400 hover:text-[var(--primary-color-tint)]'
   return (
     <Popover className="relative bg-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-0">
@@ -24,20 +25,22 @@ export default function Navbar() {
             className="hidden space-x-10 md:flex items-center"
           >
             <Link
-              href="/campaigns"
-              className="text-base font-medium text-gray-500"
+              className={linkClassNames}
+              href="/campaigns" 
             >
               CAMPAIGNS
             </Link>
             <Link
               href="/proposals"
-              className="text-base font-medium text-gray-500"
+              className={linkClassNames}
+
             >
               PROPOSALS
             </Link>
             <Link
               href="/join-our-dao"
-              className="text-base font-medium text-gray-500"
+              className={linkClassNames}
+
             >
               JOIN OUR DAO
             </Link>
@@ -65,7 +68,7 @@ export default function Navbar() {
       >
         <Popover.Panel
           focus
-          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
+          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden z-50"
         >
           <div className="divide-y-2 divide-gray-50 rounded-lg bg-black shadow-lg ring-1 ring-black ring-opacity-5 w-full border border-white z-50">
             <div className="px-5 pt-5 pb-6">
@@ -99,6 +102,7 @@ export default function Navbar() {
                   NEW CAMPAIGN
                 </Link>
               </div>
+              {/* why styling a div like a button? */}
               <div className="w-full">
                 <div className="long-btn py-2 px-10 text-[#8E8F94] w-full">
                   LAUNCH APP
