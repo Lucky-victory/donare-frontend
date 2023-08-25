@@ -8,7 +8,7 @@ const StartCampaignBanner = () => {
     <div className="pb-10">
       <div
         onClick={() => router.push("/campaigns/create-campaign")}
-        className="cursor-pointer mx-auto px-20 py-6 w-full border border-dashed border--[#eb8108] flex flex-col gap-4 items-center justify-center"
+        className="cursor-pointer mx-auto px-20 py-6 w-full border border-dashed border--[var(--primary-color)] flex flex-col gap-4 items-center justify-center"
       >
         <PlusIcon className="w-8 h-8 text-lime" />
         <p className="text-2xl font-medium text-center text-lime">

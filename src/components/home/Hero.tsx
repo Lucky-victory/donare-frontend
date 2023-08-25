@@ -1,4 +1,4 @@
-import { HeroBg } from "../../../public";
+import { HeroBg,TransactImg } from "../../../public";
 import Image from "next/image";
 import { RocketLaunchIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
@@ -9,17 +9,17 @@ export const Hero = () => {
     <div className="w-full bg-[#0C0F19]">
       <div className="relative w-full h-[87vh] max-w-7xl mx-auto flex flex-col lg:flex-row gap-4 px-6">
         {/* put HeroBg In an overlay div in background, full width and height */}
-        <div className="w-full h-full absolute top-0 left-0">
-          <Image
-            src={HeroBg}
+        <div className="mx-auto max-w-[800px] h-[800px] absolute top-0 left-[50%] translate-x-[-50%]">
+          <Image 
+            src={TransactImg}
             alt="Hero Background"
-            className="object-cover object-center"
+            className="object-cover object-center opacity-5 w-full"
           />
         </div>
         {/* main div with hero text and CTAs */}
         <div className="-mt-6 w-full h-full flex flex-col justify-center items-center text-center z-10 lg:max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-semibold text-white">
-            <span className="text-[#eb8108]"> Empower Innovative </span>  Initiatives through Blockchain Crowdfunding
+            <span className="text-[var(--primary-color)]"> Empower Innovative </span>  Initiatives through Blockchain Crowdfunding
           </h1>
           <p className="text-white text-opacity-60 text-lg md:text-xl text-center pt-4 ">
             {" "}

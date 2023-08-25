@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <RainbowKitProvider
         chains={chains}
         theme={darkTheme({
-          accentColor: "#eb8108",
+          accentColor: "var(--primary-color)",
           accentColorForeground: "white",
           borderRadius: "medium",
           fontStack: "system",

@@ -7,7 +7,7 @@ const ThreeAnys = () => {
   return (
     <div className="relative w-full min-h-[70vh] lg:h-[90vh] max-w-7xl mx-auto flex flex-col gap-4 px-6 py-8">
       <div className="w-full max-w-3xl mx-auto h-[150px] bg-black bg-opacity-30 border border-[#23293D] -mt-10 py-6 rounded-2xl flex flex-col items-center justify-center gap-4">
-        <h1 className="text-4xl font-semibold text-center pt-4 text-[#eb8108]">
+        <h1 className="text-4xl font-semibold text-center pt-4 text-[var(--primary-color)]">
           $128,234,600
         </h1>
         <p className="text-center text-lg lg:text-2xl text-white text-opacity-60">
@@ -24,14 +24,14 @@ const ThreeAnys = () => {
           </p>
           <button className="long-btn-trans py-3 px-8 mt-4 lg:mt-8 flex items-center gap-2">
             <span className="uppercase">Learn More</span>
-            <ChevronRightIcon className="h-5 w-5 text-[#d89e5b]" />
+            <ChevronRightIcon className="h-5 w-5 text-[var(--primary-color-tint)]" />
           </button>
         </div>
-        <div className="w-full lg:w-1/2 h-full">
-          <Image
+        <div className="w-full lg:min-h-[500px] lg:w-1/2 h-full sm:max-w-[400px]">
+          <Image 
             src={GlobeSvg}
             alt=""
-            className="object-contain object-center w-full h-full"
+            className=" object-contain object-center w-full h-full"
           />
         </div>
       </div>
