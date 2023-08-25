@@ -123,7 +123,7 @@ const CreateProposal = () => {
             <h1 className="font-bold startC">Create Proposal</h1>
           </div>
 
-          <h2 className="text-xl text-[#eb8108] pl-20 pt-5">
+          <h2 className="text-xl text-[var(--primary-color)] pl-20 pt-5">
             Proposal Info{" "}
             
           </h2>
