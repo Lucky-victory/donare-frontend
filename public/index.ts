@@ -1,6 +1,7 @@
 export { default as Logo } from './daovation-logo.svg';
 export { default as HeroBg } from './bg.png';
 export { default as GlobeSvg } from './globe.svg';
+export { default as TransactImg } from './transact.svg';
 export { default as ThreeAnysImg } from './three-anys-img.png';
 export { default as NearFooter1 } from './near-footer-img-1.png';
 export { default as NearFooter2} from './near-footer-img-2.png';

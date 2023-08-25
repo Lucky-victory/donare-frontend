@@ -27,11 +27,11 @@ const ThreeAnys = () => {
             <ChevronRightIcon className="h-5 w-5 text-[var(--primary-color-tint)]" />
           </button>
         </div>
-        <div className="w-full lg:w-1/2 h-full">
-          <Image
+        <div className="w-full lg:min-h-[500px] lg:w-1/2 h-full sm:max-w-[400px]">
+          <Image 
             src={GlobeSvg}
             alt=""
-            className="object-contain object-center w-full h-full"
+            className=" object-contain object-center w-full h-full"
           />
         </div>
       </div>
