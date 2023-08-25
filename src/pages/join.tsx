@@ -64,7 +64,7 @@ const JoinForm = () => {
           Welcome
         </h1>
         <p className="lg:text-lg py-2 text-center text-[#8E8F94]">
-          Please fill in the form below to join DAOvation, you&apos;d get your
+          Please fill in the form below to join Donare, you&apos;d get your
           own NFT as a proof of membership and be able to vote on proposals.
         </p>
 

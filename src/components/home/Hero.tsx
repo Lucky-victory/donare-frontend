@@ -16,16 +16,14 @@ export const Hero = () => {
             className="object-cover object-center"
           />
         </div>
-        {/* main div with hero text anf ctas */}
+        {/* main div with hero text and CTAs */}
         <div className="-mt-6 w-full h-full flex flex-col justify-center items-center text-center z-10 lg:max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-7xl font-semibold text-white">
-            <span className="text-[#89D472]"> Crowdfund </span> for Innovative
-            causes on the blockchain
+          <h1 className="text-4xl md:text-6xl font-semibold text-white">
+            <span className="text-[#eb8108]"> Empower Innovative </span>  Initiatives through Blockchain Crowdfunding
           </h1>
           <p className="text-white text-opacity-60 text-lg md:text-xl text-center pt-4 ">
             {" "}
-            Leverage technology to facilitate community-driven decision-making
-            and raise funds for your causes.
+            Harness the power of technology to enable community-driven decision-making and secure funding for your initiatives.
           </p>
 
           <button

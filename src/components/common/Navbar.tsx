@@ -9,6 +9,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 // }
 
 export default function Navbar() {
+  const linkClassNames='text-base font-medium text-gray-400 hover:text-[var(--primary-color-tint)]'
   return (
     <Popover className="relative bg-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-0">
@@ -24,20 +25,22 @@ export default function Navbar() {
             className="hidden space-x-10 md:flex items-center"
           >
             <Link
-              href="/campaigns"
-              className="text-base font-medium text-gray-500"
+              className={linkClassNames}
+              href="/campaigns" 
             >
               CAMPAIGNS
             </Link>
             <Link
               href="/proposals"
-              className="text-base font-medium text-gray-500"
+              className={linkClassNames}
+
             >
               PROPOSALS
             </Link>
             <Link
               href="/join-our-dao"
-              className="text-base font-medium text-gray-500"
+              className={linkClassNames}
+
             >
               JOIN OUR DAO
             </Link>
@@ -65,7 +68,7 @@ export default function Navbar() {
       >
         <Popover.Panel
           focus
-          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
+          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden z-50"
         >
           <div className="divide-y-2 divide-gray-50 rounded-lg bg-black shadow-lg ring-1 ring-black ring-opacity-5 w-full border border-white z-50">
             <div className="px-5 pt-5 pb-6">
@@ -99,6 +102,7 @@ export default function Navbar() {
                   NEW CAMPAIGN
                 </Link>
               </div>
+              {/* why styling a div like a button? */}
               <div className="w-full">
                 <div className="long-btn py-2 px-10 text-[#8E8F94] w-full">
                   LAUNCH APP
@@ -124,7 +128,7 @@ const Logo = () => (
       fillRule="evenodd"
       clipRule="evenodd"
       d="M20.2956 0.88555C19.962 0.692935 19.551 0.692936 19.2174 0.88555L0.68562 11.5849C0.352002 11.7775 0.146484 12.1334 0.146484 12.5187V33.9173C0.146484 34.3025 0.352003 34.6585 0.685622 34.8511L19.2174 45.5504C19.551 45.743 19.962 45.743 20.2956 45.5504L38.8274 34.8511C39.161 34.6585 39.3665 34.3025 39.3665 33.9173V12.5187C39.3665 12.1334 39.161 11.7775 38.8274 11.5849L20.2956 0.88555ZM8.87172 15.817C8.18126 16.237 8.18126 17.2393 8.87172 17.6594L12.6831 19.9781L8.87172 22.2969C8.18126 22.7169 8.18126 23.7192 8.87172 24.1392L12.6663 26.4477L8.87172 28.7562C8.18126 29.1763 8.18126 30.1786 8.87172 30.5986L19.187 36.8741C19.5312 37.0836 19.9636 37.0836 20.3078 36.8741L30.6231 30.5986C31.3135 30.1786 31.3135 29.1763 30.6231 28.7562L26.8285 26.4477L30.6231 24.1392C31.3135 23.7192 31.3135 22.7169 30.6231 22.2969L26.8117 19.9781L30.6231 17.6594C31.3135 17.2393 31.3135 16.237 30.6231 15.817L20.3078 9.54146C19.9636 9.33202 19.5312 9.33202 19.187 9.54146L8.87172 15.817Z"
-      fill="#89D472"
+      fill="#eb8108"
     />
     <path
       opacity="0.72"

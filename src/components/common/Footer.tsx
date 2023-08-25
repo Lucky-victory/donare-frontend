@@ -18,7 +18,7 @@ const Footer = () => {
             </h1>
             <ul className="flex flex-col gap-3 items-start mt-6 text-[#8E8F94] font-normal">
               <li className="text-center lg:text-left hover:underline cursor-pointer">
-                Intro to Daovation
+                Intro to Donare
               </li>
               <li className="text-center lg:text-left hover:underline cursor-pointer">
                 FAQs

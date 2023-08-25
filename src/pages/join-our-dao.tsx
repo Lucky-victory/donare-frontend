@@ -9,7 +9,7 @@ const JoinOurDao = () => {
     <Layout>
       <div className="text-white w-full h-full flex flex-col items-center px-4 pb-20">
         <h1 className="lg:pt-8 text-2xl lg:text-4xl font-semibold lg:text-center text-white">
-          Join DAOvation to help decide how the ecosystem runs
+          Join Donare to help decide how the ecosystem runs
         </h1>
 
         <div className="grid grid-cols-2 md:grid-cols-3  gap-12 min-h-[200px] w-full my-8 max-w-3xl mx-auto">
@@ -44,7 +44,7 @@ const JoinOurDao = () => {
           <button
             onClick={() => router.push("/join")}
             className="long-btn px-20 py-3 w-full">
-            <span className="text-black">JOIN DAOVATION</span>
+            <span className="text-black">JOIN DONARE</span>
           </button>
         </div>
       </div>

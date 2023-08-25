@@ -98,7 +98,7 @@ const Proposals = () => {
           Proposals
         </h1>
         <p className="lg:text-lg py-2 text-center text-[#8E8F94]">
-          Proposals are suggestions submitted by members of DAOvation. You can
+          Proposals are suggestions submitted by members of Donare. You can
           vote for, against or abstain.
         </p>
         <Link href="/proposals/create-proposal"> <button className="long-btn p-2 text-center"> Create Proposal</button> </Link>
