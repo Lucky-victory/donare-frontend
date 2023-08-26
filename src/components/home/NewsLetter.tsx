@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsLetter = () => {
   return (
-    <div className="bg-[var(--primary-color)] w-full">
+    <div className="bg-[var(--primary-color-dark)] w-full">
       <div className="w-full max-w-7xl py-12 mx-auto flex flex-col lg:flex-row gap-8 px-6 min-h-[40vh] lg:h-[40vh]">
         <div>
           <h1 className="text-white text-2xl lg:text-5xl font-medium">
