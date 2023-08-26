@@ -13,7 +13,7 @@ export const Hero = () => {
           <Image 
             src={TransactImg}
             alt="Hero Background"
-            className="object-contain object-center opacity-20 w-full"
+            className="object-contain object-center opacity-25 w-full"
           />
         </div>
         {/* main div with hero text and CTAs */}
