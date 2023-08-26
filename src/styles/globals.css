@@ -11,6 +11,7 @@
 :root{
 --color:var(--primary-color);
 --primary-color:#1171cd;
+--primary-color-dark:#072c4e;
 --primary-color-tint:var(--primary-color-tint) ;
 --primary-color-tint:#2c91f0 ;
 --primary-color-shade:#324a61 ;
