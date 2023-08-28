@@ -1,0 +1,40 @@
+.card{
+    border-radius: 2rem;
+    border: 5px solid #3A4052;
+}
+
+.card-list{
+    position: relative;
+    /* border-left: 2px solid red; */
+}
+.card-list li{
+    position: relative;
+padding-left: 2.5rem;
+}
+.card-list li::before{
+    content: '';
+    width: 1.375rem;
+    height: 1.375rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-color-tint);
+    box-shadow: 0 0 10px 3px var(--primary-color-tint);
+}
+.stroke{
+    position: absolute;
+    transform: translateY(-50%);
+    left: 0.625rem;
+    top: 50%;
+    height: 70%;
+    background: var(--primary-color-tint);
+    width: 1px;
+}
+@media all and (max-width:480px){
+    .stroke{
+        height: 65%;
+      
+    }
+}
