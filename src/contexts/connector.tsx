@@ -1,6 +1,6 @@
 import {useState,useEffect, createContext, useContext } from "react";
 import { useNetwork,useSwitchNetwork,Chain } from "wagmi";
-import useConnector from "@/utils/Connector";
+import handleConnector from "@/utils/Connector";
 import { IConnector,Connector } from "@/interfaces/base";
 
 const ConnectContext = createContext<Connector|null>(null);
@@ -23,19 +23,19 @@ export const ConnectContextProvider = ({children}:any)=>{
             switcher?.reset();
         }
               
-    },[network?.chain?.id]);
+    },[network?.chain?.id,networkIDs,switcher]);
    
-    const conn = useConnector(network?.chain?.id!, network?.chain?.name!);
+    const conn = handleConnector(network?.chain?.id!, network?.chain?.name!);
     const [connector,setConnector] = useState<IConnector|null>(conn);
   
     useEffect(()=>{
-        setConnector( useConnector(network?.chain?.id!, network?.chain?.name!));
+        setConnector( handleConnector(network?.chain?.id!, network?.chain?.name!));
         if(switcher.isIdle && !networkIDs.includes(network?.chain?.id)){
             switcher?.switchNetwork!(networkIDs[0])
             switcher?.reset();
         }
         
-    },[network?.chain?.id])
+    },[network?.chain?.id,networkIDs,switcher,network?.chain?.name])
 
     network.chain?.id
     

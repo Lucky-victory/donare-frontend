@@ -27,7 +27,7 @@ const ThreeAnys = () => {
           Every Individual, Everywhere, Every Moment, Every Chain!
           </h1>
           <p className="text-white text-opacity-60 lg:text-lg pt-2">
-          Designed to support community-driven initiatives, Donare enables trustworthy individuals to gather resources for pressing concerns and fund grants. Donare's reach isn't confined to a single blockchain; it's accessible to users across various EVM chains.
+          Designed to support community-driven initiatives, Donare enables trustworthy individuals to gather resources for pressing concerns and fund grants. Donare&apos;s reach isn&apos;t confined to a single blockchain; it&apos;s accessible to users across various EVM chains.
           </p>
           <button className="long-btn-trans py-3 px-8 mt-4 lg:mt-8 self-start flex items-center gap-2">
             <span className="uppercase">Learn More</span>

@@ -39,7 +39,7 @@ const CampaignCard = ({ campaign }: CampaignCardProps) => {
             }
     }
     getData();
-  }, [data]);
+  }, [data,raising]);
 
   if(!theData) return null
 
@@ -49,7 +49,7 @@ const CampaignCard = ({ campaign }: CampaignCardProps) => {
       className="cursor-pointer flex flex-col items-center justify-start w-full h-full p-4 rounded-2xl shadow-md border-2 border-[#161a28]"
     >
       <div className="w-full h-[250px] rounded-lg overflow-hidden">
-        <img
+        <Image
           src={`https://dweb.link/ipfs/${theData?.coverImage}`}
           alt={theData?.title}
           className="object-cover w-full h-full"

@@ -4,8 +4,8 @@ import {ADDRESSES} from "../constants/addresses";
 import { IConnector,addressBlock,selected_network_addresses,abiList} from "@/interfaces/base";
 
 
-
-const useConnector = (chainID:number,networkName:string):(IConnector|null) =>{
+// renamed from useConnector to handleConnector because of ESLint
+const handleConnector = (chainID:number,networkName:string):(IConnector|null) =>{
     const addresses:selected_network_addresses = ADDRESSES;
     const abi_list:abiList = abis.ABI;
 
@@ -29,4 +29,4 @@ const useConnector = (chainID:number,networkName:string):(IConnector|null) =>{
     return connect??null;
 }
 
-export default useConnector;
+export default handleConnector;
