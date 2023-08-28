@@ -15,7 +15,7 @@ const BeforeFooter = () => {
 <div className="rounded-xl p-5 border-[2px] border-[#3A4052] mt-8">
   <p>
 
- <span className="text-[var(--primary-color-tint)] text-4xl">`&ldquo;`</span> Donare made it easy to fund my million dollar idea. <span className="text-[var(--primary-color-tint)] text-4xl">`&rdquo;`</span>
+ <span className="text-[var(--primary-color-tint)] text-4xl">&ldquo;</span> Donare made it easy to fund my million dollar idea. <span className="text-[var(--primary-color-tint)] text-4xl">&rdquo;</span>
   </p>
   <div className="flex items-center mt-4 gap-5">
     <Image alt="" src={'/user-1.jpg'} width={50} height={50} className="rounded-full"/>
