@@ -18,7 +18,11 @@ const client = new Web3Storage({
   token:
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDYzRDdFRUI5NjQ3NWUwYjcxMjYxYTJhMjJGQWM1OTRGRTY2RjRkNzkiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NzUxODU3NTk1NDksIm5hbWUiOiJGaWxsaW9uIn0.ZgOQRRLkkRk8uchRIjrrof5zAuoBnqIA4WSAPJNESMk",
 });
-
+const transactionMessage:string[] = [
+  "Uploading campaign details...",
+  "Submitting campaign data...",
+  "Creating campaign...",
+  "Campaign created successfully!"];
 const CreateCampaign = () => {
   const router = useRouter();
   const {connector,network_switcher,supportedChains,currentChain} = useConnectorContext();
@@ -33,7 +37,7 @@ const CreateCampaign = () => {
     if (!isHubChain) {
       network_switcher(supportedChains[0].id);
     }
-  }, [currentChain]);
+  }, [currentChain,isHubChain,network_switcher,supportedChains]);
   
   const [tab1, setTab1] = useState<boolean>(true);
   const [tab2, setTab2] = useState<boolean>(false);
@@ -60,11 +64,7 @@ const CreateCampaign = () => {
   const [tx4, setTx4] = useState<boolean>(false);
   const [open,setOpen] =useState<boolean>(false);
 
-  const transactionMessage:string[] = [
-      "Uploading campaign details...",
-      "Submitting campaign data...",
-      "Creating campaign...",
-      "Campaign created successfully!"];
+ 
 
   const handleCoverImageChange = (e: any) => {
     setCoverImage(e.target.files[0]);
@@ -130,7 +130,7 @@ const CreateCampaign = () => {
 
 
    
-  },[name,campaignName,link,projectDetails,coverImage]);
+  },[name,campaignName,link,projectDetails,coverImage,target]);
 
 
 
@@ -228,7 +228,7 @@ const CreateCampaign = () => {
       console.log("hash: " + JSON.stringify(campaignData))
     }
 
-  },[dataCampaignTxnLoading,dataCampaignTxnSuccess,dataCampaignTxnErr,campaignDataIsSucess])
+  },[dataCampaignTxnLoading,dataCampaignTxnSuccess,dataCampaignTxnErr,campaignDataIsSucess,campaignData,dataCampaignError?.message,dataCampaignTxn?.status])
 
 
  
@@ -237,7 +237,7 @@ const CreateCampaign = () => {
     if(approved) {
       campaignDataWrite!();
     }
-  },[approved]);
+  },[approved,campaignDataWrite]);
 
 
     
