@@ -11,7 +11,7 @@ const BeforeFooter = () => {
     
 <div className={`${styles.card} flex-1 max-w-[924px] text-white lg:px-8 lg:py-7 px-4 py-6`}>
 <h2 className="text-3xl my-6 lg:text-4xl text-center">The <span className="text-[var(--primary-color-tint)]">Innovative</span> way to build your DAO</h2>
-<p className="text-center">Leverage technology to facilitate community-driven decision-making and raise funds for your causes.</p>
+<p className="text-center text-gray-300">Leverage technology to facilitate community-driven decision-making and raise funds for your causes.</p>
 <div className="rounded-xl p-5 border-[2px] border-[#3A4052] mt-8">
   <p>
 
@@ -26,9 +26,9 @@ const BeforeFooter = () => {
   </div>
 </div>
 </div>
-<div className={`${styles.card} min-w-[300px] max-w-[624px] text-white lg:px-8 lg:py-7 px-4 py-6`}>
+<div className={`${styles.card} min-w-[300px] flex-1 text-white lg:px-8 lg:py-7 px-4 py-6`}>
   <h2 className="text-3xl my-6 lg:text-4xl">How Donare Works</h2>
-  <ul className={`list-none text-sm  ${styles['card-list']}` }>
+  <ul className={`list-none text-sm  ${styles['card-list']} text-gray-300` }>
     <div className={`${styles.stroke} m:h-[60%]`}>
 
     </div>

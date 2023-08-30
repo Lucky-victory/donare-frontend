@@ -69,7 +69,7 @@ const Campaign = () => {
       }
     }
     getData();
-  }, [data,raisedAmount,raising]);
+  }, [data]);
 
   if (!theData)
     return (
@@ -90,7 +90,7 @@ const Campaign = () => {
             <div className="w-full lg:w-1/2">
               {/* Image */}
               <div className="w-full h-[250px] lg:h-[400px] px-8 rounded-xl overflow-hidden">
-                <Image
+                <img
                   src={`https://dweb.link/ipfs/${theData?.coverImage}`}
                   alt={theData?.title}
                   className="object-cover w-full h-full"

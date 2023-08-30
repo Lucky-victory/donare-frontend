@@ -7,7 +7,7 @@ const ConnectContext = createContext<Connector|null>(null);
 
 export const ConnectContextProvider = ({children}:any)=>{
     const network = useNetwork();
-    const networkIDs:(number|undefined)[] = network?.chains.map(chain =>chain.id);
+    const networkIDs:(number|undefined)[] = network?.chains?.map(chain =>chain?.id);
 
     //switch to hub network if connected to a none supported network
     const switcher = useSwitchNetwork({
@@ -23,7 +23,7 @@ export const ConnectContextProvider = ({children}:any)=>{
             switcher?.reset();
         }
               
-    },[network?.chain?.id,networkIDs,switcher]);
+    },[network?.chain?.id]);
    
     const conn = handleConnector(network?.chain?.id!, network?.chain?.name!);
     const [connector,setConnector] = useState<IConnector|null>(conn);
@@ -35,9 +35,8 @@ export const ConnectContextProvider = ({children}:any)=>{
             switcher?.reset();
         }
         
-    },[network?.chain?.id,networkIDs,switcher,network?.chain?.name])
+    },[network?.chain?.id])
 
-    network.chain?.id
     
    return (
      <ConnectContext.Provider 

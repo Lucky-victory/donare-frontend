@@ -93,7 +93,7 @@ const Proposals = () => {
   };
   return (
     <Layout>
-      <div className="flex flex-col items-start w-full min-h-screen max-w-7xl mx-auto">
+      <div className="flex flex-col items-start w-full min-h-screen max-w-7xl mx-auto px-4 lg:px-6">
         <h1 className="text-3xl lg:text-5xl font-semibold text-center text-lime">
           Proposals
         </h1>
@@ -104,7 +104,7 @@ const Proposals = () => {
         <Link href="/proposals/create-proposal"> <button className="long-btn p-2 text-center"> Create Proposal</button> </Link>
 
 
-        <div className="flex overflow-x-scroll mt-4 py-8">
+        <div className="flex overflow-x-scroll mt-4 py-8 ">
           {state.map((category, index) => (
             <button
               key={index}
@@ -152,7 +152,7 @@ const ProposalCard = ({ title, status, proposer, endTime, id }: ProposalCardProp
   return (
     <Link
       href={`proposal/${id}`}
-      className="cursor-pointer trans transform hover:scale-105 flex flex-col items-start justify-between w-full h-full p-6 border border-[#333B56] rounded-lg shadow-lg"
+      className="cursor-pointer trans transform hover:border-white flex flex-col items-start justify-between w-full h-full p-6 border border-[#333B56] rounded-lg shadow-lg"
     >
       <div className="flex flex-col items-start justify-between w-full h-full gap-8">
         <div className="flex items-center justify-between w-full">
@@ -165,7 +165,7 @@ const ProposalCard = ({ title, status, proposer, endTime, id }: ProposalCardProp
           <p
             className={`
                         text-lg font-semibold text-[#8E8F94]
-                        ${status === "Open" ? "text-lime" : ""}
+                        ${status === "Open" ? "text-lime-500" : ""}
                         ${status === "Expired" ? "text-red-500" : ""}
                         ${status === "Closed" ? "text-orange-500" : ""}
                         `}
