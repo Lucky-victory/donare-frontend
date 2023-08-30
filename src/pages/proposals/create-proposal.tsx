@@ -27,7 +27,7 @@ const CreateProposal = () => {
 
   const { data, isLoading, isSuccess, writeAsync } = useContractWrite({
     mode: "recklesslyUnprepared",
-    address: ADDRESSES[chainId as keyof typeof ADDRESSES]
+    address: ADDRESSES[chainId as keyof typeof ADDRESSES] && ADDRESSES[chainId as keyof typeof ADDRESSES]
       .CAMPAIGN_FACTORY as `0x${string}`,
     abi: ABI.campaignFactory,
   });
