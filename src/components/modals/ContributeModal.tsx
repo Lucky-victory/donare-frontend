@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { XMarkIcon } from "@heroicons/react/24/solid";
@@ -9,6 +9,7 @@ import { toast } from "react-hot-toast";
 import { prepareWriteContract, writeContract } from "@wagmi/core";
 import { ethers } from "ethers";
 import handleConnector from '../../utils/Connector';
+import isEmpty from "just-is-empty";
 
 interface Props {
   isOpen: boolean;
@@ -17,20 +18,29 @@ interface Props {
 }
 
 const ContributeModal = ({ isOpen, closeModal, campaign }: Props) => {
-  const [amount, setAmount] = React.useState("");
-  const [memo, setMemo] = React.useState("");
-
+  // const [amount, setAmount] = React.useState("");
+  // const [memo, setMemo] = React.useState("");
+  const [formData,setFormData] = React.useState({amount:'',message:''});
+const handleInputChange=(evt:ChangeEvent<HTMLInputElement>)=>{
+const {name,value}=evt.target;
+setFormData((prev)=>({...prev,[name]:value}));
+}
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    if (!amount || !memo) return toast.error("Please fill all fields");
+    if (isEmpty(formData.amount) || isEmpty(formData.message)) {toast.error("Please fill all fields");
+
+    // console.log({amount,memo});
+    
+    return
+  }
     try {
       const configure = await prepareWriteContract({
         address: campaign as `0x${string}`,
         abi: ABI.campaign,
         functionName: "donate",
-        args: [memo],
+        args: [formData?.message],
         overrides: {
-          value: ethers.utils.parseEther(amount),
+          value: ethers.utils.parseEther(formData?.amount),
           // gasLimit: 
         },
       });
@@ -40,6 +50,7 @@ const ContributeModal = ({ isOpen, closeModal, campaign }: Props) => {
       });
       console.log(data);
       closeModal();
+
       toast.success(`Thank you for your contribution. View on explorer: https://testnet.bscscan.com/tx/${data.hash}`);
     } catch (error: any) {
       console.log(error);
@@ -107,27 +118,37 @@ const ContributeModal = ({ isOpen, closeModal, campaign }: Props) => {
                     type="number"
                     name="amount"
                     placeholder="enter an amount in BNB"
-                    value={amount}
-                    onChange={(e) => setAmount(e.target.value)}
+                    value={formData.amount}
+                    onChange={handleInputChange}
                   />
 
                   {/* Short Message */}
                   <Input
                     label="Short Message"
                     type="text"
-                    name="memo"
+                    
+                    name="message"
                     placeholder="Leave a short message"
-                    value={memo}
-                    onChange={(e) => setMemo(e.target.value)}
+                    value={formData.message}
+                    onChange={handleInputChange}
                   />
 
                   {/* Button */}
+                  <div className="flex justify-between items-center gap-4">
+
                   <button
                     type="submit"
                     className="w-full bg-lime text-black rounded-md py-3 font-medium my-6"
-                  >
-                    Contribute
+                    >
+                    Give
                   </button>
+                  <button
+                    type="submit"
+                    className="w-full border-2 border-[var(--primary-color-tint)] text-[var(--primary-color-tint)] rounded-md py-3 font-medium my-6"
+                    >
+                    Stream Funds
+                  </button>
+                    </div>
                 </form>
               </Dialog.Panel>
             </Transition.Child>
