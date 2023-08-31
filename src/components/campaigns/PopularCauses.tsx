@@ -38,7 +38,7 @@ const PopularCauses = () => {
 
 export default PopularCauses;
 
-const campaigns = [
+export const campaigns = [
   {
     title: "Building a plant powered Blockchain",
     image: ThreeAnysImg,

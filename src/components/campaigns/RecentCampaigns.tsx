@@ -46,7 +46,7 @@ const RecentCampaigns = () => {
 
 export default RecentCampaigns;
 
-const campaigns = [
+export const campaigns = [
   {
     title: "Building a plant powered Blockchain",
     image: ThreeAnysImg,
