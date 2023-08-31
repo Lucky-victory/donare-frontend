@@ -18,9 +18,9 @@ interface Props {
 }
 
 const ContributeModal = ({ isOpen, closeModal, campaign }: Props) => {
-  // const [amount, setAmount] = React.useState("");
+  const [canShowStream, setCanShowStream] = React.useState(false);
   // const [memo, setMemo] = React.useState("");
-  const [formData,setFormData] = React.useState({amount:'',message:''});
+  const [formData,setFormData] = React.useState(!canShowStream?{amount:'',message:''}:{amount:'',message:'',streamRate:'',startDate:0,endDate:0});
 const handleInputChange=(evt:ChangeEvent<HTMLInputElement>)=>{
 const {name,value}=evt.target;
 setFormData((prev)=>({...prev,[name]:value}));
@@ -57,7 +57,9 @@ setFormData((prev)=>({...prev,[name]:value}));
       toast.error(error);
     }
   };
-
+function showFieldsForFundStream(){
+setCanShowStream(!canShowStream)
+}
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -143,12 +145,42 @@ setFormData((prev)=>({...prev,[name]:value}));
                     Give
                   </button>
                   <button
-                    type="submit"
+                    type="button" onClick={()=>showFieldsForFundStream()}
                     className="w-full border-2 border-[var(--primary-color-tint)] text-[var(--primary-color-tint)] rounded-md py-3 font-medium my-6"
                     >
                     Stream Funds
                   </button>
                     </div>
+                    {canShowStream &&
+                    <div className="">
+ <Input
+                    label="Stream rate"
+                    type="number"
+                    
+                    name="streamRate"
+                    placeholder="0.01      WETH/mon"
+                    value={formData.streamRate}
+                    onChange={handleInputChange}
+                  />
+                  <div className="my-4">
+
+                    <span className="font-medium text-white">
+     Duration
+      </span>
+      <div className="flex gap-4 items-center my-2">
+      {[{text:'1 week'},{text:'2 weeks'},{text:'1 month'}].map((item,i)=>(
+      <label className="text-white rounded-full hover:border-[var(--primary-color-tint)] border-2 px-4 py-[1px] border-gray-500" htmlFor={'inp'+i} key={i}><input hidden type="radio" name="date" id={'inp'+i}/>{item?.text}</label>
+      ))}
+      </div>
+                  </div>
+                    <button
+                    type="submit"
+                    className="w-full bg-lime text-black rounded-md py-3 font-medium mt-6"
+                    >
+                    Complete
+                  </button>
+                    </div>
+                    }
                 </form>
               </Dialog.Panel>
             </Transition.Child>
