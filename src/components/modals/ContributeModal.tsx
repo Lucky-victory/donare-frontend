@@ -169,7 +169,10 @@ setCanShowStream(!canShowStream)
       </span>
       <div className="flex gap-4 items-center my-2">
       {[{text:'1 week'},{text:'2 weeks'},{text:'1 month'}].map((item,i)=>(
-      <label className="text-white rounded-full hover:border-[var(--primary-color-tint)] border-2 px-4 py-[1px] border-gray-500" htmlFor={'inp'+i} key={i}><input hidden type="radio" name="endDate" id={'inp'+i}/>{item?.text}</label>
+        <div className="">
+<input hidden type="radio" className="radio" name="endDate" id={'inp'+i} />
+      <label className="text-white rounded-full hover:border-[var(--primary-color-dark)] border-2 px-4 py-[1px] border-gray-500" htmlFor={'inp'+i} key={i}>{item?.text}</label>
+        </div>
       ))}
       </div>
                   </div>
