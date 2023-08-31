@@ -17,6 +17,10 @@
 --primary-color-shade:#4a6e8f ;
 
 }
+.radio:checked + label{
+border-color: var(--primary-color-tint);
+
+}
 .long-btn {
     @apply bg-[var(--primary-color)] hover:bg-[var(--primary-color-tint)] text-white rounded-sm focus:outline-none trans font-semibold
 }
